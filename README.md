@@ -12,5 +12,6 @@ go run ./cmd/api -port="3001" -env="development"
 
 ### current api
 
-/v1/healthcheck 
+/v1/healthcheck
+ 
 /v1/movies/:id 
