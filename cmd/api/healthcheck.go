@@ -27,8 +27,11 @@ func (app *application) healthCheckHandler(w http.ResponseWriter, r *http.Reques
 	// pass the map to json marshall
 	err := app.writeJSON(w, http.StatusOK, data, nil)
 	if err != nil {
-		app.logger.Println(err)
-		http.Error(w, "Server error and cannot processing your request", http.StatusInternalServerError)
-		return
+		// change into our error helper
+		// app.logger.Println(err)
+		// http.Error(w, "Server error and cannot processing your request", http.StatusInternalServerError)
+		// return
+
+		app.serverErrorResponse(w, r, err)
 	}
 }
