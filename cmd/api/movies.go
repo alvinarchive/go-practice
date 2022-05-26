@@ -55,7 +55,6 @@ func (app *application) createMovieHandler(w http.ResponseWriter, r *http.Reques
 	if err != nil {
 		app.serverErrorResponse(w, r, err)
 	}
-	fmt.Fprintf(w, "%+v\n", input)
 }
 
 // Add showMovieHandler
